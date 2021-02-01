@@ -6,14 +6,15 @@
 
   <PropertyGroup>
     <PackageId>RockLib.Messaging.Http</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
-    <Authors>Brian Friesen</Authors>
+    <PackageVersion>1.0.5</PackageVersion>
+    <Authors>RockLib</Authors>
     <Description>An implementation of RockLib.Messaging that sends and receives messages via HTTP.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/RockLib/RockLib.Messaging</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <Copyright>Copyright 2018-2019 (c) Quicken Loans Corporation. All rights reserved.</Copyright>
+    <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Copyright 2018-2020 (c) Quicken Loans Corporation. All rights reserved.</Copyright>
     <PackageTags>rocklib messaging http</PackageTags>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -25,10 +26,13 @@
 
   <ItemGroup>
     <None Include="..\LICENSE.md" Pack="true" PackagePath="" />
+    <None Include="..\icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RockLib.Messaging" Version="2.0.4" />
+    <PackageReference Include="RockLib.Messaging" Version="2.4.3" />
   </ItemGroup>
+
+  <Import Project="..\RockLib.Messaging.HttpUtils\RockLib.Messaging.HttpUtils.projitems" Label="Shared" />
 
 </Project>

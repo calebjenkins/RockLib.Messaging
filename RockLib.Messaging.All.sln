@@ -49,9 +49,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{4D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Messaging.SQS.DotNetCore31", "Example.Messaging.SQS.DotNetCore31\Example.Messaging.SQS.DotNetCore31.csproj", "{8267F208-ACEF-44B2-87F7-5AB8B5ACC334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Common.Tests", "Example.Common.Tests\Example.Common.Tests.csproj", "{FA9C8FE8-C056-413C-9FB1-75722A74754B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Common.Tests", "Example.Common.Tests\Example.Common.Tests.csproj", "{FA9C8FE8-C056-413C-9FB1-75722A74754B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{2533BA4A-E1D7-414F-84A2-EA2FDB1FE3B3}"
+	ProjectSection(SolutionItems) = preProject
+		docs\CloudEvents.md = docs\CloudEvents.md
+		docs\Compressed.md = docs\Compressed.md
+		docs\DIContainer.md = docs\DIContainer.md
+		docs\ForwardingReceiver.md = docs\ForwardingReceiver.md
+		docs\GettingStarted.md = docs\GettingStarted.md
+		docs\Http.md = docs\Http.md
+		docs\Kafka.md = docs\Kafka.md
+		docs\NamedPipes.md = docs\NamedPipes.md
+		docs\RabbitMQ.md = docs\RabbitMQ.md
+		README.md = README.md
+		docs\ReceivingMessages.md = docs\ReceivingMessages.md
+		docs\SendingMessages.md = docs\SendingMessages.md
+		docs\SNS.md = docs\SNS.md
+		docs\SQS.md = docs\SQS.md
+		docs\TransactionalSend.md = docs\TransactionalSend.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockLib.Messaging.Kafka.Tests", "RockLib.Messaging.Kafka.Tests\RockLib.Messaging.Kafka.Tests.csproj", "{90D40EBE-88D2-44E6-A21B-0521D30422EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockLib.Messaging.CloudEvents", "RockLib.Messaging.CloudEvents\RockLib.Messaging.CloudEvents.csproj", "{FFC6155D-02D8-49F1-8943-A079BD8BFF26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockLib.Messaging.CloudEvents.Tests", "RockLib.Messaging.CloudEvents.Tests\RockLib.Messaging.CloudEvents.Tests.csproj", "{B7B9E920-3251-4AE6-AA83-5147EC3403E6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RockLib.Messaging.HttpUtils", "RockLib.Messaging.HttpUtils\RockLib.Messaging.HttpUtils.shproj", "{93800DE0-2CC4-454D-BD9C-4C7058DFD276}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Messaging.CloudEvents", "Example.Messaging.CloudEvents\Example.Messaging.CloudEvents.csproj", "{13418188-1DFE-48F4-9103-B592B34023B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Application.Testing", "Example.Application.Testing\Example.Application.Testing.csproj", "{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		RockLib.Messaging.HttpUtils\RockLib.Messaging.HttpUtils.projitems*{93800de0-2cc4-454d-bd9c-4c7058dfd276}*SharedItemsImports = 13
+		RockLib.Messaging.HttpUtils\RockLib.Messaging.HttpUtils.projitems*{a84fce16-e330-498f-a4a2-b4467153d731}*SharedItemsImports = 5
+		RockLib.Messaging.HttpUtils\RockLib.Messaging.HttpUtils.projitems*{ffc6155d-02d8-49f1-8943-a079bd8bff26}*SharedItemsImports = 5
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -149,6 +185,26 @@ Global
 		{FA9C8FE8-C056-413C-9FB1-75722A74754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9C8FE8-C056-413C-9FB1-75722A74754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9C8FE8-C056-413C-9FB1-75722A74754B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D40EBE-88D2-44E6-A21B-0521D30422EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D40EBE-88D2-44E6-A21B-0521D30422EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D40EBE-88D2-44E6-A21B-0521D30422EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D40EBE-88D2-44E6-A21B-0521D30422EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC6155D-02D8-49F1-8943-A079BD8BFF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC6155D-02D8-49F1-8943-A079BD8BFF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC6155D-02D8-49F1-8943-A079BD8BFF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC6155D-02D8-49F1-8943-A079BD8BFF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B9E920-3251-4AE6-AA83-5147EC3403E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B9E920-3251-4AE6-AA83-5147EC3403E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B9E920-3251-4AE6-AA83-5147EC3403E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B9E920-3251-4AE6-AA83-5147EC3403E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13418188-1DFE-48F4-9103-B592B34023B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13418188-1DFE-48F4-9103-B592B34023B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13418188-1DFE-48F4-9103-B592B34023B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13418188-1DFE-48F4-9103-B592B34023B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +221,8 @@ Global
 		{9CC4E7E9-9E82-4EE6-AFA1-FEDCA893A017} = {4D9FDDA2-CE7E-4B49-AADE-20745A52064C}
 		{8267F208-ACEF-44B2-87F7-5AB8B5ACC334} = {4D9FDDA2-CE7E-4B49-AADE-20745A52064C}
 		{FA9C8FE8-C056-413C-9FB1-75722A74754B} = {4D9FDDA2-CE7E-4B49-AADE-20745A52064C}
+		{13418188-1DFE-48F4-9103-B592B34023B2} = {4D9FDDA2-CE7E-4B49-AADE-20745A52064C}
+		{7221DFC0-ED53-4F4D-8CB7-163FEEF1E5F8} = {4D9FDDA2-CE7E-4B49-AADE-20745A52064C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FEE2AF4-936B-474F-A3C0-7118F5655DCC}
